@@ -1,0 +1,7 @@
+- Chromecasting
+- Lobby / start game
+- Progression globale
+- Levenshtein
+- Submit à la JetPunk
+- Updates real time sur qui trouve quoi
+- bug: Switch de couleur quand la deuxieme equipe entre en scene

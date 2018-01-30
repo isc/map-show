@@ -1,0 +1,7 @@
+hr
+#app
+  = form_tag answer_game_path(@game), 'v-on:submit.prevent': 'sendAnswer'
+    .form-group
+      input.form-control type="text" v-model="answer"
+  .alert v-if="feedback" v-bind:class="{ no_match: 'alert-danger', match: 'alert-success', already_found: 'alert-warning' }[feedback]"
+    ' {{feedback.replace('_', ' ')}}

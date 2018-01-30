@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title MapShow
+    = csrf_meta_tags
+    link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"
+    = stylesheet_link_tag    'application', media: 'all'
+    meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no"
+  body
+    nav.navbar.navbar-dark.bg-primary
+      span.navbar-text map.show
+      span.navbar-text.pull-right= @current_player&.name
+    .container
+      = yield
+    script src="https://unpkg.com/vue"
+    script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"
+    = javascript_include_tag 'application'
